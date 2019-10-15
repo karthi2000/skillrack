@@ -1,0 +1,72 @@
+
+import java.io.*;
+import java.util.*;
+public class Main
+{
+   
+    public static void main(String args[])
+    {
+    
+        String[] s=new String[100];
+        String[] strNew=new String[100];
+        Scanner in=new Scanner(System.in);
+        
+		
+        int i,j;
+        int n=in.nextInt();
+        for(i=0;i<n;i++)
+        {
+            s[i]=in.next();
+        }
+        for(j=0;j<n;j++)
+        {
+            int letter = 0;
+		int num = 0;
+		int other=0;
+            char[] ch = s[j].toCharArray();
+		    for(int k = 0; k < s[j].length(); k++)
+		    {
+			    if(Character.isLetter(ch[k]))
+			    {
+				    letter ++ ;
+			    }
+			    else if(Character.isDigit(ch[k]))
+			    {
+				    num ++ ;
+			    }
+		    	else
+			    {
+				    other ++;
+			    }
+		    }
+		    if(letter>(num+other))
+		    {
+		        
+		       s[j] = s[j].replaceAll("[^a-zA-Z]", "");
+		       
+		    }
+		    else
+		    {
+		       
+		       s[j] = s[j].replaceAll("[a-zA-Z]", "");
+		       
+		    }
+        }
+        int max=0;
+        String h=null;
+        for(int z=0;z<n;z++)
+        {
+            System.out.println(s[z]);
+            if(s[z].length()>max)
+            {
+                max=s[z].length();
+                h=s[z];
+                
+            }
+        }
+        System.out.println(h);
+     
+        
+        
+    }
+}
