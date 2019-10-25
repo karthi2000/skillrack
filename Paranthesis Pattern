@@ -1,0 +1,23 @@
+#include<stdio.h>
+#include<stdlib.h>
+#include<string.h>
+int main()
+{
+char s[1000];
+scanf("%s",s);
+int a=strlen(s);
+for(int i=0,j=a-1;j<=j;i++,j--)
+{
+  for(int z=0;z<a;a++)
+  {
+    if(i==z||j==z)
+    {
+      printf("(");
+      printf("%c",s[z]);
+      printf(")");
+      continue;
+    }
+    printf("%c",s[z]);
+  }
+  printf("\n");
+}
