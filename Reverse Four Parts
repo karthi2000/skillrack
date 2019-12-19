@@ -1,0 +1,23 @@
+#include<iostream.h>
+#include<string.h>
+int main(int argc,char** argv)
+{
+char s[1000];
+cin>>s;
+int a=strlen(s);
+int n=a/4;
+int h=0;
+int z=0;
+int i=0;
+while(i<a)
+{
+z=z+n;
+for(int j=z-1;j>=h;j--)
+{
+cout<<s[j];
+}
+cout<<" ";
+h=h+n;
+i=i+n;
+}
+}
