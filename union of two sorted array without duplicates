@@ -1,0 +1,32 @@
+def printUnion(x, y, m, n): 
+    i,j = 0,0
+    z=[0]
+    while i < m and j < n: 
+        if x[i] < y[j]: 
+            z.append(x[i]) 
+            i += 1
+        elif y[j] < x[i]: 
+            z.append(y[j]) 
+            j+= 1
+        else: 
+            z.append(y[j]) 
+            j += 1
+            i += 1
+  
+    # Print remaining elements of the larger array 
+    while i < m: 
+        z.append(x[i]) 
+        i += 1
+  
+    while j < n: 
+        z.append(y[j]) 
+        j += 1
+    z = list(dict.fromkeys(z))    
+    for h in range(1,len(z)):
+        print(z[h], end =" ") 
+# Driver program to test above function 
+x=[int(x) for x in input().split()]
+y=[int(y) for y in input().split()] 
+m = len(x) 
+n = len(y) 
+printUnion(x, y, m, n) 
