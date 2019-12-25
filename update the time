@@ -1,0 +1,33 @@
+#include <stdio.h>
+
+int main()
+{
+	int hour1,minute1;
+	int minute2;
+	int hour,minute;
+	scanf("%d:%d",&hour1,&minute1);
+    scanf("%d",&minute2);
+	minute=minute1+minute2;
+	hour=hour1+(minute/60);
+	minute=minute%60;
+	hour=hour%24;
+    if(hour<10&&minute<10)
+    {
+		printf("0%d:0%d",hour,minute);
+    }
+    else if(hour<10)
+    {
+        printf("0%d:%d",hour,minute);
+    }
+    else if(minute<10)
+    {
+        printf("%d:0%d",hour,minute);
+    }
+    else
+    {
+        printf("%d:%d",hour,minute);
+    }
+    
+
+	return 0;
+}
