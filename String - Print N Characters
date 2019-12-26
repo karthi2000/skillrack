@@ -1,0 +1,10 @@
+s=['a','b','c','d']
+j=0
+i=0
+a=int(input())
+while(j<a):
+  print(s[i],end="")
+  i=i+1
+  j=j+1
+  if(i==4):
+    i=0
