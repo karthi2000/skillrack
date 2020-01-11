@@ -1,0 +1,24 @@
+#include<iostream>
+#include<string.h>
+using namespace std;
+int main(int argc,char** argv)
+{
+  string s;
+  cin>>s;
+  int n=s.length();
+  for(int i=0;i<n;i++)
+  {
+    for(int j=0;j<n;j++)
+    {
+      if(i<j)
+      {
+        s[j]=s[i];
+      }
+    }
+    for(int z=0;z<n;z++)
+    {
+      cout<<s[z];
+      }
+      cout<<endl;
+      }
+      }
