@@ -1,0 +1,42 @@
+#include<stdlib.h>
+#include<stdio.h>
+int* getArrayOfOddOrEven(int N)
+{
+    int* ptr=(int*)malloc(N*sizeof(int));
+    int z=0;
+    if(N%2==0)
+    { 
+        for(int i=1;z<=N;i++)
+        {
+            if(i%2==0)
+            {   
+                ptr[z]=i;
+                z++;
+             }
+         }
+     }
+     else
+     {
+          for(int i=1;z<=N;i++)
+          {
+              if(i%2!=0)
+              {
+                  ptr[z]=i;
+                  z++;
+               }
+           }
+     }
+     return ptr;
+}
+int main()
+{
+  int N;
+  scanf("%d ",&N);
+  int *arr=getArrayOfOddOrEven(N);
+  for(int index=0;index<N;index++)
+  {
+      printf("%d ",arr[index]);
+  }
+  free(arr);
+  return 0;
+}
