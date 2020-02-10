@@ -1,0 +1,14 @@
+def reverse(a):
+  s=""
+  for z in range(len(a)-1,-1,-1):
+    s=s+a[z]
+  return s
+s=[x.replace("\r","") for x in input(),split(" ")]
+x=int(input())
+j=1
+for i in range(0,len(s)):
+    if((i+1)==(x*j)):
+        print(reverse(s[i]),end=" ")
+        j=j+1
+    else:
+        print(s[i],end=" ")
