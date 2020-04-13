@@ -1,0 +1,25 @@
+
+
+#include <iostream>
+
+using namespace std;
+
+int main()
+{
+    string s;
+    cin>>s;
+    char h;
+    for(int i=0;i<s.length()-1;i++)
+    {
+        while(s[i]==s[i+1]||h==s[i+1])
+        {
+            h=s[i];
+            s[i]='*';
+            s[i+1]='*';
+            i++;   
+        }
+        h='*';
+        
+    }
+    cout<<s;
+}
