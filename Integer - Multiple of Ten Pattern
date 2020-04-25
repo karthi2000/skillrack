@@ -1,0 +1,34 @@
+#include <iostream>
+#include<math.h>
+using namespace std;
+
+int main()
+{
+    int n,m=0,rem=0,i=0;
+    cin>>n;
+    int temp=n;
+    while(temp>0)
+    {
+        temp=temp/10;
+        m++;
+    }
+    temp=n;
+    long a[m];
+    long h=pow(10,m-1);
+    while(temp>0)
+    {
+        rem=temp%10;
+        a[i++]=rem*h;
+        temp=temp/10;
+    }
+    for(int k=0;k<m;k++)
+    {
+        for(int j=i-1;j>=0;j--)
+        {
+            long h=pow(10,k);
+            cout<<a[j]/h<<" ";
+        }
+        cout<<endl;
+    }
+        
+}
