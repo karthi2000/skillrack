@@ -1,0 +1,27 @@
+import java.util.*;
+public class Hello
+{
+    public static void main(String[] args)
+    {
+        Scanner in=new Scanner(System.in);
+        String s=in.next();
+        char c[]=s.toCharArray();
+        for(int i=0;i<s.length();i++)
+        {
+            if(c[i]=='1')
+            { 
+                c[i]='*';
+                System.out.print("1");
+                break;
+            }
+         }
+         Arrays.sort(c);
+         for(char a:c)
+         {
+              if(a!='*')
+              {
+                  System.out.print(a);
+               }
+          }
+     }
+ }
